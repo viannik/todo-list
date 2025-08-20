@@ -2,19 +2,19 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-<div class="container mt-4">
-  <h1 class="mb-4">
-    {{ object|yesno:"Update,Create" }} task
-  </h1>
+  <div class="container mt-4">
+    <h1 class="mb-4">
+      {{ object|yesno:"Update,Create" }} task
+    </h1>
 
-  <form action="" method="post" novalidate class="card p-4">
-    {% csrf_token %}
-    {{ form|crispy }}
+    <form action="" method="post" novalidate class="card p-4">
+      {% csrf_token %}
+      {{ form|crispy }}
 
-    <div class="d-flex justify-content-end mt-3">
-      <a onclick="window.history.back()" class="btn btn-secondary me-2">Cancel</a>
-      <button type="submit" class="btn btn-primary">Save</button>
-    </div>
-  </form>
-</div>
+      <div class="d-flex justify-content-end mt-3">
+        <a onclick="window.history.back()" class="btn btn-secondary me-2">Cancel</a>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
 {% endblock %}
